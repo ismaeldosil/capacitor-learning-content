@@ -1,0 +1,81 @@
+name: Quiz
+description: Crear preguntas de quiz
+title: "[Quiz]: "
+labels: ["type: quiz"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Preguntas de Quiz
+        Usa este template para crear o modificar preguntas de evaluación.
+
+  - type: dropdown
+    id: module
+    attributes:
+      label: Módulo
+      options:
+        - "Módulo 1: Setup + Fundamentos"
+        - "Módulo 2: Plugins Core"
+        - "Módulo 3: Build & Deploy"
+        - "Módulo 4: Testing & Stores"
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Descripción
+      description: ¿Qué preguntas necesitas crear?
+      placeholder: "Crear 10 preguntas sobre plugins de Capacitor..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: topics
+    attributes:
+      label: Temas a Evaluar
+      description: Lista de temas que deben cubrir las preguntas
+      placeholder: |
+        - Configuración de @capacitor/app
+        - Push notifications FCM/APNs
+        - Biometric authentication
+        - Diferencias iOS vs Android
+    validations:
+      required: true
+
+  - type: input
+    id: question-count
+    attributes:
+      label: Cantidad de Preguntas
+      description: ¿Cuántas preguntas necesitas?
+      placeholder: "10"
+    validations:
+      required: true
+
+  - type: textarea
+    id: requirements
+    attributes:
+      label: Requisitos
+      value: |
+        - [ ] Preguntas de opción múltiple (4 opciones)
+        - [ ] Una respuesta correcta por pregunta
+        - [ ] Explicación para cada respuesta
+        - [ ] Variar dificultad (fácil → difícil)
+        - [ ] Cubrir todos los temas de las lecciones
+
+  - type: dropdown
+    id: primary-agent
+    attributes:
+      label: Agente Principal
+      options:
+        - quiz-specialist
+    validations:
+      required: true
+
+  - type: textarea
+    id: secondary-agents
+    attributes:
+      label: Agentes Secundarios
+      value: |
+        **Secondary:** content-strategist
+        **Reviewers:** content-reviewer

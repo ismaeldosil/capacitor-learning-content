@@ -1,0 +1,80 @@
+name: Game Data
+description: Datos para mini-juegos
+title: "[Game Data]: "
+labels: ["type: game-data"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Datos para Mini-Juego
+        Usa este template para crear datos de mini-juegos.
+
+  - type: dropdown
+    id: game
+    attributes:
+      label: Mini-Juego
+      options:
+        - Command Builder (Módulo 1) - Secuencias de comandos
+        - Plugin Matcher (Módulo 2) - Pares caso de uso/plugin
+        - Build Pipeline (Módulo 3) - Pasos de build
+        - Store Reviewer (Módulo 4) - Errores de configuración
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Descripción
+      description: ¿Qué datos necesitas crear?
+    validations:
+      required: true
+
+  - type: textarea
+    id: data-structure
+    attributes:
+      label: Estructura de Datos Requerida
+      description: Ejemplo del formato JSON necesario
+      placeholder: |
+        ```json
+        {
+          "pairs": [
+            {
+              "useCase": "Mostrar Face ID",
+              "plugin": "@capacitor-community/biometric"
+            }
+          ]
+        }
+        ```
+    validations:
+      required: true
+
+  - type: input
+    id: item-count
+    attributes:
+      label: Cantidad de Items
+      description: ¿Cuántos items/niveles necesitas?
+      placeholder: "10 pares"
+    validations:
+      required: true
+
+  - type: textarea
+    id: requirements
+    attributes:
+      label: Requisitos
+      value: |
+        - [ ] Datos técnicamente correctos
+        - [ ] Hints útiles incluidos
+        - [ ] Dificultad balanceada
+        - [ ] Formato JSON válido
+
+  - type: dropdown
+    id: primary-agent
+    attributes:
+      label: Agente Principal
+      options:
+        - capacitor-fundamentals-writer (Command Builder)
+        - capacitor-plugins-writer (Plugin Matcher)
+        - capacitor-build-writer (Build Pipeline)
+        - capacitor-stores-writer (Store Reviewer)
+    validations:
+      required: true

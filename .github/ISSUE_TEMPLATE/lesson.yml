@@ -1,0 +1,88 @@
+name: Lección
+description: Crear o modificar una lección
+title: "[Lesson]: "
+labels: ["type: lesson"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Contenido de Lección
+        Usa este template para crear o modificar lecciones.
+
+  - type: dropdown
+    id: module
+    attributes:
+      label: Módulo
+      options:
+        - "Módulo 1: Setup + Fundamentos"
+        - "Módulo 2: Plugins Core"
+        - "Módulo 3: Build & Deploy"
+        - "Módulo 4: Testing & Stores"
+    validations:
+      required: true
+
+  - type: input
+    id: lesson-title
+    attributes:
+      label: Título de la Lección
+      placeholder: "¿Qué es Capacitor?"
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Descripción del Contenido
+      description: ¿Qué debe cubrir esta lección?
+      placeholder: |
+        Esta lección debe explicar:
+        - Concepto X
+        - Comparación con Y
+        - Ejemplo práctico de Z
+    validations:
+      required: true
+
+  - type: textarea
+    id: topics
+    attributes:
+      label: Temas a Cubrir
+      placeholder: |
+        - [ ] Introducción al concepto
+        - [ ] Ejemplo de código funcional
+        - [ ] Diferencias iOS vs Android
+        - [ ] Best practices
+        - [ ] Troubleshooting común
+    validations:
+      required: true
+
+  - type: dropdown
+    id: primary-agent
+    attributes:
+      label: Agente de Contenido
+      options:
+        - capacitor-fundamentals-writer (Módulo 1)
+        - capacitor-plugins-writer (Módulo 2)
+        - capacitor-build-writer (Módulo 3)
+        - capacitor-stores-writer (Módulo 4)
+    validations:
+      required: true
+
+  - type: dropdown
+    id: complexity
+    attributes:
+      label: Complejidad
+      options:
+        - S (contenido simple, 1-2 horas)
+        - M (contenido moderado, medio día)
+        - L (contenido extenso, 1 día)
+    validations:
+      required: true
+
+  - type: textarea
+    id: references
+    attributes:
+      label: Referencias
+      description: Links a documentación oficial, recursos, etc.
+      placeholder: |
+        - https://capacitorjs.com/docs/...
+        - https://...
