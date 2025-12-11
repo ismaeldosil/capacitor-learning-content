@@ -1,5 +1,10 @@
 # Capacitor Learning Content
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Content](https://img.shields.io/badge/Content-Markdown%20%2B%20JSON-blue)](.)
+[![Modules](https://img.shields.io/badge/Modules-4-green)](.)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](http://makeapullrequest.com)
+
 Contenido educativo para la plataforma de aprendizaje de Ionic + Capacitor.
 
 ## Descripción
